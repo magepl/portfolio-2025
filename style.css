@@ -1,0 +1,131 @@
+:root {
+  --white: #ffffff;
+  --greentext: #1c8059;
+  --greenborder: #d6ece3;
+  --greenhover: #f7fbf9;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  font-family: "Montreal", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--white);
+  color: var(--greentext);
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("./fonts/ppneuemontreal-bold.woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Montreal";
+  src: url("./fonts/ppneuemontreal-book.woff");
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("./fonts/ppneuemontreal-italic.woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("./fonts/ppneuemontreal-medium.woff");
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("./fonts/ppneuemontreal-semibolditalic.woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("./fonts/ppneuemontreal-thin.woff");
+  font-weight: 100;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+}
+
+.right-container {
+  text-align: end;
+}
+
+div {
+  border: 1px solid black;
+}
+
+li {
+  list-style: none;
+}
