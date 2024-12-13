@@ -122,10 +122,30 @@ h6 {
   text-align: end;
 }
 
-div {
-  border: 1px solid black;
-}
-
 li {
   list-style: none;
+}
+
+li > a:hover {
+  color: aqua;
+}
+
+.email-link {
+  display: inline;
+  cursor: pointer;
+}
+
+.email-link:hover {
+  background-color: var(--greenhover);
+}
+
+.experience-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+#copied-email {
+  /* display: none; */
+  border: 1px solid var(--greenborder);
+  font-size: 0.75rem;
 }
