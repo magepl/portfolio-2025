@@ -6,19 +6,13 @@ email.addEventListener("click", copyEmail);
 function copyEmail() {
   navigator.clipboard.writeText(myEmail).then(
     () => {
-      console.log("copied to clipboard");
+      email.textContent = "copied to clipboard";
+      setTimeout(() => {
+        email.textContent = "email";
+      }, 2000);
     },
     () => {
       console.log("failed to copy", err);
     }
   );
 }
-
-const copyEmailNotification = document.getElementById("copied-email");
-
-email.addEventListener("click", (event) => {
-  copyEmailNotification.style.display = "inline";
-  setTimeout(() => {
-    copyEmailNotification.style.display = "none";
-  }, 2000);
-});
