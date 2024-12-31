@@ -145,7 +145,7 @@ li > a:hover {
 }
 
 #copied-email {
-  /* display: none; */
+  display: none;
   border: 1px solid var(--greenborder);
   font-size: 0.75rem;
 }

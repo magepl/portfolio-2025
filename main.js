@@ -1,9 +1,10 @@
-let email = document.getElementById("copyTest");
+const myEmail = "m.g.plunkett@gmail.com";
+let email = document.getElementById("copy-email");
 
-email.addEventListener("click", copyText);
+email.addEventListener("click", copyEmail);
 
-function copyText() {
-  navigator.clipboard.writeText("m.g.plunkett@gmail.com").then(
+function copyEmail() {
+  navigator.clipboard.writeText(myEmail).then(
     () => {
       console.log("copied to clipboard");
     },
@@ -12,3 +13,12 @@ function copyText() {
     }
   );
 }
+
+const copyEmailNotification = document.getElementById("copied-email");
+
+email.addEventListener("click", (event) => {
+  copyEmailNotification.style.display = "inline";
+  setTimeout(() => {
+    copyEmailNotification.style.display = "none";
+  }, 2000);
+});
