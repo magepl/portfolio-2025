@@ -126,16 +126,14 @@ li {
   list-style: none;
 }
 
-li > a:hover {
-  color: aqua;
+a {
+  color: var(--greentext);
+  text-decoration: none;
 }
 
-.email-link {
+.right-container > li:hover {
   display: inline;
   cursor: pointer;
-}
-
-.email-link:hover {
   background-color: var(--greenhover);
 }
 
