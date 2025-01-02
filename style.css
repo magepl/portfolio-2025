@@ -142,8 +142,16 @@ a {
   justify-content: space-between;
 }
 
+.experience-grid:hover {
+  background-color: var(--greenhover);
+}
+
 #copied-email {
   display: none;
   border: 1px solid var(--greenborder);
   font-size: 0.75rem;
+}
+
+.size-6 {
+  width: 1rem;
 }

@@ -7,7 +7,7 @@ email.addEventListener("click", copyEmail);
 function copyEmail() {
   navigator.clipboard.writeText(myEmail).then(
     () => {
-      email.textContent = "copied to clipboard";
+      email.textContent = "copied to clipboard!";
       setTimeout(() => {
         email.textContent = "email";
       }, 2000);
@@ -44,20 +44,4 @@ fetch(githhubUrl)
   })
   .catch((error) => {
     console.error(`Error: ${error.message}`);
-  });
-
-const literalUrl = "https://literal.club/api/v1";
-fetch(literalUrl)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error(`HTTP Error: ${response.status}`);
-    }
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.log(`Error: ${error.message}`);
   });
