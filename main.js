@@ -20,10 +20,10 @@ function copyEmail() {
 
 const repoOwner = "magepl";
 const repoName = "portfolio-2025";
-const url = `https://api.github.com/repos/${repoOwner}/${repoName}`;
+const githhubUrl = `https://api.github.com/repos/${repoOwner}/${repoName}`;
 const repoDateUpdated = document.getElementById("github-last-updated-at");
 
-fetch(url)
+fetch(githhubUrl)
   .then((response) => {
     if (response.ok) {
       return response.json();
@@ -44,4 +44,20 @@ fetch(url)
   })
   .catch((error) => {
     console.error(`Error: ${error.message}`);
+  });
+
+const literalUrl = "https://literal.club/api/v1";
+fetch(literalUrl)
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error(`HTTP Error: ${response.status}`);
+    }
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(`Error: ${error.message}`);
   });
